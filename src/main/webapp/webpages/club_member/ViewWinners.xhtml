@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+    <title>View Winners</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputText value="winners : "></h:outputText>
+        <p:dataTable id="winners" var="winner" value="#{wnrMB.currentUserActivityList}" style="width:100%; weight:30%">
+            <p:column selectionMode="multiple" style="width:16px;text-align:center"/>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Winners ID" />
+                        </f:facet>
+                        <h:outputText value="#{Winners.winnerId}" />
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Winners Name" />
+                        </f:facet>
+                        <h:outputText value="#{Winners.winnerName}" />
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Event Name" />
+                        </f:facet>
+                        <h:outputText value="#{Winners.eventName}" />
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Prize" />
+                        </f:facet>
+                        <h:outputText value="#{Winners.prize}" />
+                    </p:column>
+                    <p:column headerText="Edit">
+                        <input type="button" value="Edit Row" onclick="deleteRow('dataTable')" class="btn btn-danger"/>
+                    </p:column>
+                    <p:column headerText="Delete">
+                        <input type="button" value="Delete Row" onclick="deleteRow('dataTable')" class="btn btn-danger"/>
+                    </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+
+</html>
+

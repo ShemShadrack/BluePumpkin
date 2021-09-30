@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Winners Page</title>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+    <style type="text/css">
+        /*body{*/
+        /*background:#629BE5;*/
+        /*}*/
+    </style>
+</h:head>
+
+<h:body>
+    <p:layout style="width:100%; height:90%; padding: 0px">
+        <!--Show All Activities-->
+        <p:layoutUnit position="center">
+            <h:form>
+                <h:outputText value="Recent Winners "></h:outputText>
+                <p:dataTable id="Winners" var="winners" value="#{wrnMB.currentUserWinnersList}" style="width:100%; weight:30%">
+                    <p:column selectionMode="multiple" style="width:16px;text-align:center"/>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Winners ID" />
+                        </f:facet>
+                        <h:outputText value="#{winners.winnerId}" />
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Winners Name" />
+                        </f:facet>
+                        <h:outputText value="#{winners.winnerName}" />
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Event Name" />
+                        </f:facet>
+                        <h:outputText value="#{winners.eventName}" />
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Prize" />
+                        </f:facet>
+                        <h:outputText value="#{winners.prize}" />
+                    </p:column>
+                    <p:column headerText="Edit">
+                        <input type="button" value="Edit Row" onclick="deleteRow('dataTable')" class="btn btn-danger"/>
+                    </p:column>
+                    <p:column headerText="Delete">
+                        <input type="button" value="Delete Row" onclick="deleteRow('dataTable')" class="btn btn-danger"/>
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+        </p:layoutUnit>
+    </p:layout>
+</h:body>
+</html>
