@@ -10,6 +10,10 @@ For the Admin, this management system will provide them access to digitalize all
 No formal knowledge is needed for the user to use this system as we tried to keep it as minimal as possible, making it a user-friendly software.  
 The clients will be able to select either pre-defined packages or customize a package according to his/her need. Clients will create an account to use the application, select the option for obtaining event management services and then fill in the respective sections with what they desire. All the information will be stored in a database, from which the firm will access it according to their needs.  
 Our Management System is not only digitalizing the booking of orders providing ease of access to the customers, but will also digitalize the firm’s functionalities such as adding/removing employees. In short, our management system will digitalize the whole firm along with its jobs.  
-![image](https://user-images.githubusercontent.com/71036965/135460461-51a5213b-4137-4c8a-b995-8eea9cc13c8d.png)
 
- 
+## Demo
+> User currently login both member role and manager role.
+
+1. ___Login page___
+    <p align="center"><img src="screenshots/starter-login.png" alt="login" width="600"></p> 
+    
